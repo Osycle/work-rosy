@@ -100,22 +100,20 @@ $(function(){
 	});
 	flickityPrevNext(".carousel-portfolio");
 
-	var carouselReviews = $('.carousel-reviews .carousel-content').flickity({
+	var carouselWorkers = $('.carousel-workers .carousel-content').flickity({
 		imagesLoaded: true,
 		autoPlay: 3500,
 		arrowShape: arrowStyle,
-		prevNextButtons: false,
+		prevNextButtons: true,
 		draggable: false,
-		selectedAttraction: 0.1,
-		friction: 1,
 		wrapAround: true,	
-		pageDots: false,
+		pageDots: true,
 		contain: false,
 		percentPosition: true,
 		cellAlign: 'center'
 	});
-	window.asd = carouselReviews;
-	flickityPrevNext(".carousel-reviews");
+
+
 
 
 
