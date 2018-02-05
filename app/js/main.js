@@ -118,13 +118,6 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
 	if( checkSm() )
 		$('.carousel-info-item .carousel-content').flickity({
 			imagesLoaded: true,
