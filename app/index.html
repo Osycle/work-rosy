@@ -110,10 +110,10 @@
 						<div class="menu pie-xs-elastic-12 text-uppercase align-left p-h-15 m-v-15">
 							<nav>
 								<ul class="menu-list">
-									<li><a href="about.html">О нас</a></li>
-									<li><a href="services.html">Услуги</a></li>
-									<li><a href="contacts.html">Отзывы</a></li>
-									<li><a href="contacts.html">Контакты</a></li>
+									<li><a data-scroll href="#short-about">О нас</a></li>
+									<li><a data-scroll href="#short-services">Услуги</a></li>
+									<li><a data-scroll href="#short-reviews">Отзывы</a></li>
+									<li><a data-scroll href="#short-contacts">Контакты</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -248,7 +248,7 @@
 
 
 			<br><br>
-			<div class="row short-about">
+			<div class="row short-about" id="short-about">
 				<div class="container">
 
 					<div class="clearfix m-v-30 ">
@@ -312,7 +312,7 @@
 
 
 
-			<div class="row short-services">
+			<div class="row short-services" id="short-services">
 				<div class="container">
 
 					<div class="clearfix m-v-30 short-services-content color-black">
@@ -325,9 +325,9 @@
 							
 							<figure>
 
-								<div class="img-content pie-xs-6"><img src="img/services/1.jpg"></div>
+								<div class="img-content pie-md-6"><img src="img/services/1.jpg"></div>
 
-								<div class="desc-content pie-xs-6">
+								<div class="desc-content pie-md-6">
 									<div class="desc-skin">
 										<h4>Спа-процедуры</h4>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. </p>
@@ -342,8 +342,18 @@
 								</div>
 
 								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-1">
+									<div class="clearfix">
 
-									<div class="row">
+										<div class="col-md-6 p-h-30 m-v-15">
+											<h4>Спа-процедуры</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur.</p>
+											<ul>
+												<li>Dolor sit amet </li>
+												<li>Consectetur adipiscing elit. </li>
+												<li>Sed iaculis nisi vel purus sollicitudin </li>
+											</ul>
+										</div>
+
 										<div class="col-md-6 p-h-15 services-feedback align-center m-v-15">
 												<form action="" method="POST" >
 													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введит имя..."></div>
@@ -356,7 +366,147 @@
 													</div>
 												</form>
 										</div>
-										<div class="col-md-6 p-h-15 m-v-15">
+
+									</div>
+								</div>
+							</figure>
+							
+
+							<figure>
+
+								<div class="img-content pie-md-6 visible-xs visible-sm"><img src="img/services/2.jpg"></div>
+
+								<div class="desc-content pie-md-6">
+									<div class="desc-skin">
+										<h4>Солярий - Коллагенарий</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. </p>
+										<span class="btn-def m-v-15 bg-color-1" style="width: 230px;">
+											<a href="#services-item-2" class="collapsed btn-res inline-block p-v-10 p-h-10 hover-color-white" role="button" data-toggle="collapse" >Выбрать программу</a>
+											<i class="fa fa-angle-right"></i>
+										</span>
+										<div class="logo-content">
+											<img src="img/logo-golden.png">
+										</div>
+									</div>
+								</div>
+
+								<div class="img-content pie-md-6 hidden-xs hidden-sm"><img src="img/services/2.jpg"></div>
+
+								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-2">
+									<div class="clearfix">
+
+										<div class="col-md-6 p-h-15 services-feedback align-center m-v-15">
+												<form action="" method="POST" >
+													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введит имя..."></div>
+													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введите телефон..."></div>
+													<div class="col-md-12 p-h-15"><textarea type="text" resize="none" placeholder="Введите Ваш текст"></textarea></div>
+													<div class="col-md-12 p-v-15">
+														<span class="btn-def m-auto hover-color-white" style="width: 200px;">
+															<button href="about.html" class="btn-res p-v-10 p-h-15">Отправить заявку</button>
+														</span>
+													</div>
+												</form>
+										</div>
+
+										<div class="col-md-6 p-h-30 m-v-15">
+											<h4>Солярий - Коллагенарий</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur.</p>
+											<ul>
+												<li>Dolor sit amet </li>
+												<li>Consectetur adipiscing elit. </li>
+												<li>Sed iaculis nisi vel purus sollicitudin </li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+							</figure>
+							
+							<figure>
+
+								<div class="img-content pie-md-6"><img src="img/services/3.jpg"></div>
+
+								<div class="desc-content pie-md-6">
+									<div class="desc-skin">
+										<h4>Массаж</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. </p>
+										<span class="btn-def m-v-15 bg-color-1" style="width: 230px;">
+											<a href="#services-item-3" class="collapsed btn-res inline-block p-v-10 p-h-10 hover-color-white" role="button" data-toggle="collapse" >Выбрать программу</a>
+											<i class="fa fa-angle-right"></i>
+										</span>
+										<div class="logo-content">
+											<img src="img/logo-golden.png">
+										</div>
+									</div>
+								</div>
+
+								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-3">
+
+									<div class="clearfix">
+
+										<div class="col-md-6 p-h-30 m-v-15">
+											<h4>Массаж</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur.</p>
+											<ul>
+												<li>Dolor sit amet </li>
+												<li>Consectetur adipiscing elit. </li>
+												<li>Sed iaculis nisi vel purus sollicitudin </li>
+											</ul>
+										</div>
+
+										<div class="col-md-6 p-h-15 services-feedback align-center m-v-15">
+											<form action="" method="POST" >
+												<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введит имя..."></div>
+												<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введите телефон..."></div>
+												<div class="col-md-12 p-h-15"><textarea type="text" resize="none" placeholder="Введите Ваш текст"></textarea></div>
+												<div class="col-md-12 p-v-15">
+													<span class="btn-def m-auto hover-color-white" style="width: 200px;">
+														<button href="about.html" class="btn-res p-v-10 p-h-15">Отправить заявку</button>
+													</span>
+												</div>
+											</form>
+										</div>
+
+									</div>
+								</div>
+							</figure>
+							
+
+							<figure>
+
+								<div class="img-content pie-md-6 visible-xs visible-sm"><img src="img/services/4.jpg"></div>
+
+								<div class="desc-content pie-md-6">
+									<div class="desc-skin">
+										<h4>Hairbar</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. </p>
+										<span class="btn-def m-v-15 bg-color-1" style="width: 230px;">
+											<a href="#services-item-4" class="collapsed btn-res inline-block p-v-10 p-h-10 hover-color-white" role="button" data-toggle="collapse" >Выбрать программу</a>
+											<i class="fa fa-angle-right"></i>
+										</span>
+										<div class="logo-content">
+											<img src="img/logo-golden.png">
+										</div>
+									</div>
+								</div>
+
+								<div class="img-content pie-md-6 hidden-xs hidden-sm"><img src="img/services/4.jpg"></div>
+
+								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-4">
+									<div class="clearfix">
+										<div class="col-md-6 p-h-15 services-feedback align-center m-v-15">
+												<form action="" method="POST" >
+													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введит имя..."></div>
+													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введите телефон..."></div>
+													<div class="col-md-12 p-h-15"><textarea type="text" resize="none" placeholder="Введите Ваш текст"></textarea></div>
+													<div class="col-md-12 p-v-15">
+														<span class="btn-def m-auto hover-color-white" style="width: 200px;">
+															<button href="about.html" class="btn-res p-v-10 p-h-15">Отправить заявку</button>
+														</span>
+													</div>
+												</form>
+										</div>
+										<div class="col-md-6 p-h-30 m-v-15">
 											<h4>Спа-процедуры</h4>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur.</p>
 											<ul>
@@ -371,15 +521,14 @@
 							</figure>
 							
 							<figure>
+								<div class="img-content pie-md-6"><img src="img/services/5.jpg"></div>
 
-								<div class="img-content pie-xs-6"><img src="img/services/1.jpg"></div>
-
-								<div class="desc-content pie-xs-6">
+								<div class="desc-content pie-md-6">
 									<div class="desc-skin">
-										<h4>Спа-процедуры</h4>
+										<h4>Leshesbar</h4>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. </p>
 										<span class="btn-def m-v-15 bg-color-1" style="width: 230px;">
-											<a href="#services-item-1" class="collapsed btn-res inline-block p-v-10 p-h-10 hover-color-white" role="button" data-toggle="collapse" >Выбрать программу</a>
+											<a href="#services-item-5" class="collapsed btn-res inline-block p-v-10 p-h-10 hover-color-white" role="button" data-toggle="collapse" >Выбрать программу</a>
 											<i class="fa fa-angle-right"></i>
 										</span>
 										<div class="logo-content">
@@ -388,9 +537,20 @@
 									</div>
 								</div>
 
-								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-1">
+								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-5">
 
-									<div class="row">
+									<div class="clearfix">
+
+										<div class="col-md-6 p-h-30 m-v-15">
+											<h4>Leshesbar</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur.</p>
+											<ul>
+												<li>Dolor sit amet </li>
+												<li>Consectetur adipiscing elit. </li>
+												<li>Sed iaculis nisi vel purus sollicitudin </li>
+											</ul>
+										</div>
+
 										<div class="col-md-6 p-h-15 services-feedback align-center m-v-15">
 												<form action="" method="POST" >
 													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введит имя..."></div>
@@ -403,8 +563,49 @@
 													</div>
 												</form>
 										</div>
-										<div class="col-md-6 p-h-15 m-v-15">
-											<h4>Спа-процедуры</h4>
+
+									</div>
+								</div>
+							</figure>
+							
+
+							<figure>
+
+								<div class="img-content visible-xs visible-sm pie-md-6"><img src="img/services/6.jpg"></div>
+
+								<div class="desc-content pie-md-6">
+									<div class="desc-skin">
+										<h4>Nailbar</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. </p>
+										<span class="btn-def m-v-15 bg-color-1" style="width: 230px;">
+											<a href="#services-item-6" class="collapsed btn-res inline-block p-v-10 p-h-10 hover-color-white" role="button" data-toggle="collapse" >Выбрать программу</a>
+											<i class="fa fa-angle-right"></i>
+										</span>
+										<div class="logo-content">
+											<img src="img/logo-golden.png">
+										</div>
+									</div>
+								</div>
+
+								<div class="img-content hidden-xs hidden-sm pie-md-6"><img src="img/services/6.jpg"></div>
+
+								<div class="services-selected-content m-v-30 parag-m-v-5 collapse" id="services-item-6">
+
+									<div class="clearfix">
+										<div class="col-md-6 p-h-15 services-feedback align-center m-v-15">
+												<form action="" method="POST" >
+													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введит имя..."></div>
+													<div class="col-md-6 p-h-15"><input type="text" name="name" placeholder="Введите телефон..."></div>
+													<div class="col-md-12 p-h-15"><textarea type="text" resize="none" placeholder="Введите Ваш текст"></textarea></div>
+													<div class="col-md-12 p-v-15">
+														<span class="btn-def m-auto hover-color-white" style="width: 200px;">
+															<button href="about.html" class="btn-res p-v-10 p-h-15">Отправить заявку</button>
+														</span>
+													</div>
+												</form>
+										</div>
+										<div class="col-md-6 p-h-30 m-v-15">
+											<h4>Nailbar</h4>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur.</p>
 											<ul>
 												<li>Dolor sit amet </li>
@@ -414,9 +615,7 @@
 										</div>
 									</div>
 								</div>
-
 							</figure>
-
 
 
 
@@ -555,13 +754,70 @@
 
 
 
+			<div class="row short-gift">
+				<div class="container">
+
+					<div class="clearfix align-center m-v-30">
+						<h1>Удовольстиве в подарок</h1>
+						<div> <img src="img/other/gift.jpg"> </div>
+
+						<div class="text-content m-v-30">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus sollicitudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulputate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maximus ante et libero pharetra vesiblum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in mada augue purus ac risus. Vestibulum sodales nec ligula eu consequat.</p>
+						</div>
+						<span class="btn-def black hover-color-white m-auto m-v-15" style="width:300px">
+							<a class="p-v-15" data-toggle="modal" data-target="#bidModal" role="button">Заказать сертификат</a>
+						</span>
+					</div>
+				</div>
+			</div>
 
 
+			<div class="row short-manufacturer">
+				<div class="container">
 
+					<div class="clearfix align-center m-v-30">
+						<h1>Продукция от лучших производителей</h1>
 
+						<div class="manufacturer-items figure-m-v-15 align-center">
 
+							<figure class="inline-block">
+								<div class="img-content">
+									<img src="img/other/manufacturer-1.jpg">
+								</div>
+							</figure>
+							<figure class="inline-block">
+								<div class="img-content">
+									<img src="img/other/manufacturer-1.jpg">
+								</div>
+							</figure>
+							<figure class="inline-block">
+								<div class="img-content">
+									<img src="img/other/manufacturer-1.jpg">
+								</div>
+							</figure>
+							<figure class="inline-block">
+								<div class="img-content">
+									<img src="img/other/manufacturer-1.jpg">
+								</div>
+							</figure>
+							<figure class="inline-block">
+								<div class="img-content">
+									<img src="img/other/manufacturer-1.jpg">
+								</div>
+							</figure>
+							<figure class="inline-block">
+								<div class="img-content">
+									<img src="img/other/manufacturer-1.jpg">
+								</div>
+							</figure>
 
+						</div>
 
+					</div>
+
+				</div>
+			</div>
 
 
 
