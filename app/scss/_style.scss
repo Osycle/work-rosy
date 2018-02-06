@@ -6,7 +6,7 @@
 											--- Variables ---
 */
 
-$color-1: #c8a881;	// WHITE BLUE
+$color-1: #c8a881;	// BROWN
 $color-2: #cc3084;	// PINK
 $color-3: #0087cb;	// BLUE-AQUA
 $color-4: #ffa800;	// LIGHT ORANGE	
@@ -17,7 +17,7 @@ $font-family-2: "Verdana";
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray_1: #F4F4F4;
+$color-gray_1: #cccccc;
 $color-gray_2: #FAFAFA;
 $color-gray_3: #212121;
 
@@ -107,7 +107,7 @@ $color-gray_3: #212121;
 		}
 	}
 
-	&.auto-width{
+	&.img-auto-width{
 		.img-content{
 			img{
 				width: auto;
@@ -385,7 +385,7 @@ img[auto]{
 	background-color: white;
 }
 .bg-color-black{
-	background-color: #333;
+	background-color: #000;
 }
 .bg-color-gray{
 	background-color: #F4F4F4;
@@ -472,7 +472,32 @@ img[auto]{
 }
 
 
+.btn-scroll{
+	position: fixed;
+	z-index: 10;
+	font-size: 25px;
+	background-color: rgba($color-1, 0.5);
+	bottom: 15px;
+	right: 25px;
+	color: black;
+	//border:2px solid white;
+	box-shadow: 0px 2px 12px -2px black;
+	border-radius: 4px;
 
+	transition: all 0.4s ease-in-out;
+	opacity: 0;
+
+	transform: matrix(1,0,0,1,0,20) scale(1.5);
+
+	a{
+		display: block;
+		padding: 3px 13px;
+	}
+	&.scrolled{
+		opacity: 1;
+		transform: scale(0.9);
+	}
+}
 
 .btn-def{
 	@extend .btn-style;
@@ -499,7 +524,6 @@ img[auto]{
 	}
 
 }
-
 
 
 
@@ -607,7 +631,7 @@ $header-min-menu: 100px;
 	height: $header-top-height;
 	img{
 		width: 100%;
-		width: 143px;
+		width: 125px;
 		max-width: unset;
 	}
 	font{
@@ -879,55 +903,34 @@ $header-min-menu: 100px;
 	h1, h2, h3{
 		color: $color-1;
 	}
-
 	button{
-		background-color: $color-1;
+		&:focus, &:active{
+			outline: none;
+		}
 	}
 	form{
 		margin-top: -20px;
-		.input__field--chisato:focus, .input--filled .input__field--chisato{
-			border-color: $color-1;
-		}
-		.input__label-content--chisato::after{
-			color: $color-1;
-		}
-		.input{
-			font-size: 1.2em;
-			margin: 0.8em 1em;
-			max-width: 100%;
-		}
-		.textarea{
-			display: block;
-			margin-top: 10px;
-			margin-bottom: 5px;
-			color: #333;
-			textarea{
-				resize: none;
-				background-color: #f0f0f0;
-				padding: 0.5em;
-				border-top: 2px solid $color-1;
-				transition: all 0.3s ease-in-out;
-				height: 60px;
-				&:focus{
-					//height: 60px;
-				}
-			}
-			*{
-				width: 100%;
-				&:focus{
-					outline: none;
-				}
-			}
-		}//textarea
-
-
+	}
+	input{
+		height: 30px;
 
 	}
-
+	input, textarea{
+		padding: 10px;
+		border:1px solid rgba($color-1, 0.4px);
+		width: 100%;
+	}
+	.btn-def{
+		background-color: transparent;
+		border: 2px solid $color-1;
+		&:hover{
+			background-color: $color-1;
+			color: white;
+		}
+	}
 	.modal-content{
 		color: $color-1;
 		margin-top: 70px;
-
 		@media only screen and (max-width: 991px){
 			width: 100%;
 		}
@@ -935,8 +938,6 @@ $header-min-menu: 100px;
 		@media only screen and (max-width: 767px){
 			width: 100%;
 		}
-
-
 	}
 	.modal-body{
 		padding: 0 30px;
@@ -946,6 +947,11 @@ $header-min-menu: 100px;
 }
 
 
+.success-info{
+	[class*="info"]{
+		line-height: 30px;
+	}
+}
 
 
 
@@ -980,7 +986,9 @@ h4{
 	text-transform: uppercase;
 }
 h5{
-	font-size: inherit;
+	font-size: em(16, 16);
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 p{
@@ -1002,6 +1010,9 @@ main{
 
 .main-content{
 	position: relative;
+	@media (max-width:991px){
+		overflow: hidden;
+	}
 }
 
 
@@ -1085,6 +1096,10 @@ a[underline]{
 			margin-top: 30px;
 			width: 220px;
 		}
+		.btn-opacity:hover{
+			border-color: $color-2;
+			color: $color-2;
+		}
 
 	}
 
@@ -1156,6 +1171,9 @@ a[underline]{
 	@media (min-width: 1600px){
 		background-position: -200px center;
 	}
+	@media (max-width: 767px){
+		background-image: none;
+	}
 
 }
 //short-services
@@ -1172,7 +1190,22 @@ a[underline]{
 			}
 		}
 	}
-
+	.img-content{
+		position: relative;
+		.img-title{
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			position:absolute;
+			h1{
+				text-shadow: 0 0 10px black;
+				text-align:center;
+				text-transform: uppercase;
+				width: 100%;
+			}
+		}
+	}
 	.desc-skin{
 		padding: 5px 20px;
 		border: 1px solid $color-1;
@@ -1195,6 +1228,17 @@ a[underline]{
 				transform: rotate(0deg);
 			}
 		}
+		@media ( max-width:991px ){
+				.btn-def{
+					margin: 15px auto;
+				}
+		}
+		@media ( max-width:400px ){
+				.btn-def .fa{
+					display: none;
+				}
+		}
+
 	}
 	.logo-content{
 		img{
@@ -1233,8 +1277,8 @@ a[underline]{
 		height: 150px;
 	}
 }
-//workers
-.workers{
+//workers-workers
+.short-workers{
 	overflow: hidden;
 	@media (max-width: 991px){
 		margin: 0;
@@ -1242,16 +1286,6 @@ a[underline]{
 }
 .carousel-workers{
 
-	.flickity-viewport{
-		overflow: auto;
-		overflow: visible;
-	}
-	.flickity-slider{
-			//@include align-cells(70, 1, table);	
-			.carousel-cell{
-				//transform: translateX( (15/2)+(30/2)+%);
-			}
-	}
 	@extend .flickity-btn-1;
 	.flickity-page-dots{
 		position: relative;
@@ -1267,7 +1301,7 @@ a[underline]{
 	}
 	figure{
 		transition: transform 0.6s ease-in-out;
-		border: 2px solid $color-1;
+		border: 1px solid $color-1;
 		h5{
 			font-weight: bold;
 		}
@@ -1277,6 +1311,12 @@ a[underline]{
 	.is-selected{
 		opacity: 1;
 		transform: scale(1);
+	}
+	@media ( min-width: 992px ){
+		.flickity-viewport{
+			overflow: auto;
+			overflow: visible;
+		}
 	}
 	@media ( max-width:991px ){
 		.desc-content p{
@@ -1289,17 +1329,15 @@ a[underline]{
 			right: 0;
 		}
 
-	.carousel-cell{
-		width: 78%;
-	}
+		.carousel-cell{
+			width: 78%;
+		}
 	}
 
 	
 }
-//manufacturer
-.short-manufacturer{
 
-}
+//short-manufacturer
 .manufacturer-items{
 	width:80%;
 	margin: auto;
@@ -1319,6 +1357,63 @@ a[underline]{
 
 
 
+//reviews
+.carousel-reviews{
+	
+	@include align-cells(90, 3, table);	
+	@media (max-width:991px){
+		@include align-cells(90, 1, table);	
+	}
+	figure{
+		background-color: white;
+		border: 2px solid $color-1;
+		min-height: 250px;
+		margin-bottom: 25px;
+		margin-top:48px;
+	}
+	.img-content{
+		width: 96px;
+		margin: auto;
+		top: -48px;
+		left: 50%;
+		margin-left: -48px;
+		position: absolute;
+	}
+	.desc-content{
+		margin: 15px 0;
+		padding: 0 25px 10px;
+		height: 260px;
+    overflow: auto;
+		h5{
+			//text-align: left;
+		}
+	}
+	.carousel-content{
+		//background-color: rgba($color-1, 0.3);
+		background-color: rgba($color-1, 0.3);
+		box-shadow: 0 0 5px 5px white;
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 7%, rgba($color-1, 0.3) 0%);
+		//background: -webkit-radial-gradient(center center, circle contain, $color-1, #fff);
+		
+	}
+	@extend .flickity-btn-1;
+	.carousel-cell{
+		transition: transform 0.3s ease-in-out;
+		opacity: 0.5;
+		transform: scale(0.9);
+	}
+	.is-selected{
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	@media (min-width: 992px){
+		.flickity-prev-next-button.previous{left: -5% !important;}
+		.flickity-prev-next-button.next{ right: -5% !important;}
+
+	}
+
+}
 
 
 
@@ -1329,9 +1424,43 @@ a[underline]{
 
 
 
+//short-contacts
+.contacts-item{
+	margin:15px 0;
+	padding: 0 15px;
 
-
-
+	&:last-child{
+		border:0;
+	}
+	min-height: 170px;
+	.stub{
+		height:41px;
+	}
+	.bottom-content{
+		width: 100%;
+		a{
+			&:not([data-toggle]){
+				color: steelblue;
+			}
+		}
+	}
+	.btn-def{
+		margin: 15px auto;
+	}
+	@media ( min-width:991px ) {
+		padding: 0 5%;
+		border-right: 2px solid $color-gray_1;
+		.bottom-content{
+			position: absolute;
+			bottom: 0;
+		}
+		.btn-def{
+			position: absolute;
+			bottom: 0;
+			margin: 0;
+		}
+	}
+}
 
 
 
@@ -1355,51 +1484,42 @@ a[underline]{
 
 #footer{
 	position: relative;
-	background-color: #1D2824;
+	background-color: $color-1;
 	color: white;
-	min-height: 400px;
+	min-height: 150px;
 	background-repeat: no-repeat;
 	background-position-y: bottom;
+	font-weight: 500;
 	p{
 		line-height: 170%;
+	}
+	.dev{
+		text-align: center;
 	}
 
 }
 .footer-menu{
 	li{
-		width: 50%;
-		margin: 5px 0;
-		transition: all 0.3s ease-in-out;
-		&:hover{
-			color: $color-1;
+		margin: 0 15px;
+	}
+}
+.footer-top{
+	margin: 15px 0;
+}
+.footer-bottom{
+	margin-top: 60px;
+}
+.footer-social{
+	ul{
+		margin-top: 15px;
+	}
+	li{
+		display: inline-block;
+		img{
+			width: 20px;
 		}
 	}
 }
-.footer-feedback{
-	input, textarea{
-		border: 0;
-		
-		padding: 15px;
-		width: 100%;
-		margin: 15px 0;
-		background-color: rgba( $color-1, 1 );
-		@include placeholder( rgba( black, 0.9 ) ) ;
-
-		transition: all 0.3s ease-in-out;
-		&:focus{
-			@include placeholder( rgba( $color-1, 0.8 ) ) ;
-		}
-	}
-
-
-	input{
-		height: 40px;
-	}
-	textarea{
-		height: 150px;
-	}
-}
-
 
 /*
 										 --- OTHER ---
