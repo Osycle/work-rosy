@@ -1642,17 +1642,74 @@ a[underline]{
 
 
 
+.pana-accordion {
+	width: 800px;
+	height: 330px;
+	margin: 20px auto;
+	position: relative;
+	overflow: hidden;
+}
+.pana-accordion-wrap {
+	margin-left: -1px;
+	position: relative;
+	width: 300%;
+	height: 100%;
+}
+
+.pana-accordion-item {
+	//border-left: 1px solid #BABABA;
+	box-shadow: 0 0 20px 0px black;
+	overflow: hidden;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	cursor: pointer;
+	.pana-accordion-mask {
+		transition: all 0.3s ease-in-out;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		position: absolute;
+		z-index: 10;
+		background-color: #000;
+		opacity: 0.4;
+	}
+	&.active {
+		.pana-accordion-mask {
+			//display: none;
+			opacity: 0.0;
+		}
+	}
+	&:first-child{
+		//margin-left: 25px;
+	}
+	&:last-child{
+		//margin-left: -25px;
+	}
+
+	.img-content{
+		position: relative;
+	}
+	.desc-content{
+		z-index: 11;
+		position: absolute;
+		top:0;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		p{
+			width: 100%;
+		}
+	}
+}
 
 
 
 
-
-
-  body {
-    //margin: 0;
-    //padding: 0;
-    //font-family: 'Raleway', sans-serif;
-  }
 
   .flex-container {
     position: absolute;

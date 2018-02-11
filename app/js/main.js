@@ -19,6 +19,21 @@ $(function(){
 		offset: 30
 	}).init();
 
+
+		
+	panaAccordion.init({
+	  id: 'accordion',
+		expandWidth: 500,
+		//itemWidth: 100,
+		extpand: 0,
+		autoPlay: !true,
+		delay: 2500,
+		animateTime: 500,
+		borderWidth: 0,
+		//deviator: 10,
+		bounce:"-50px"
+	});
+
 	// SMOTHSCROLL-LINK
 	smoothScroll.init({
 		easing: 'easeInOutCubic'

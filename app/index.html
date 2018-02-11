@@ -1012,65 +1012,49 @@
 				<div class="container">
 					<div class="slider-acc">
 
-						<div class="flex-container">
-						  <div class="spinner">
-						    <p>
-						    <div class="cube1"></div>
-						    <div class="cube2"></div>
-						    Loading...
-						    </p>
-						  </div>
-						  <div class="flex-slide home">
-						    <div class="flex-title flex-title-home">Home</div>
-						    <div class="flex-about flex-about-home">
-						      <p>Click here to navigate to the home section of the website</p>
+						<div class="pana-accordion" id="accordion">
+						  <div class="pana-accordion-wrap">
+						    <div class="pana-accordion-item" style="background-color: #F44336">
+						    	<div class="img-content">
+						    		<img src="img/services/1.jpg">
+						    	</div>
+						    	<div class="desc-content">
+						    		<p>Spa salutions</p>
+						    	</div>
 						    </div>
-						  </div>
-						  <div class="flex-slide about">
-						    <div class="flex-title">About</div>
-						    <div class="flex-about">
-						      <p>Click here to navigate to the About section of the website</p>
+						    <div class="pana-accordion-item" style="background-color: #2196F3">
+						    	<div class="img-content">
+						    		<img src="img/services/2.jpg">
+						    	</div>
+						    	<div class="desc-content">
+						    		<p>Spa salutions</p>
+						    	</div>
 						    </div>
-						  </div>
-						  <div class="flex-slide work">
-						    <div class="flex-title">Work</div>
-						    <div class="flex-about">
-						      <p>Listing relevant snippets of work:</p>
-						      <ul>
-						        <li>First piece of work</li>
-						        <li>Second piece of work</li>
-						        <li>Third piece of work</li>
-						      </ul>
+						    <div class="pana-accordion-item" style="background-color: #4CAF50">
+						    	<div class="img-content">
+						    		<img src="img/services/4.jpg">
+						    	</div>
+						    	<div class="desc-content">
+						    		<p>Spa salutions</p>
+						    	</div>
 						    </div>
-						  </div>
-						  <div class="flex-slide home">
-						    <div class="flex-title">Work</div>
-						    <div class="flex-about">
-						      <p>Listing relevant snippets of work:</p>
-						      <ul>
-						        <li>First piece of work</li>
-						        <li>Second piece of work</li>
-						        <li>Third piece of work</li>
-						      </ul>
+						    <div class="pana-accordion-item" style="background-color: #2196F3">
+						    	<div class="img-content">
+						    		<img src="img/services/2.jpg">
+						    	</div>
+						    	<div class="desc-content">
+						    		<p>Spa salutions</p>
+						    	</div>
 						    </div>
-						  </div>
+						    <div class="pana-accordion-item" style="background-color: #4CAF50">
+						    	<div class="img-content">
+						    		<img src="img/services/4.jpg">
+						    	</div>
+						    	<div class="desc-content">
+						    		<p>Spa salutions</p>
+						    	</div>
+						    </div>
 
-						  <div class="flex-slide contact">
-						    <div class="flex-title">Contact</div>
-						    <div class="flex-about">
-						      <p>Use the contact form below</p>
-						      <form class="contact-form">
-						        <p>Email
-						          <input type="text" name="email">
-						        </p>
-						        <p>Comment
-						          <textarea type="text" name="comment" row="5"></textarea>
-						        </p>
-						        <p>
-						          <input type="submit" name="email" value="Send Message">
-						        </p>
-						      </form>
-						    </div>
 						  </div>
 						</div>
 						
@@ -1079,35 +1063,6 @@
 			</div>
 
 		
-
-			<script>
-			(function(){
-					$('.flex-container').waitForImages(function() {
-						$('.spinner').fadeOut();
-				}, $.noop, true);
-				
-				$(".flex-slide").each(function(){
-					$(this).hover(function(){
-						$(this).find('.flex-title').css({
-							transform: 'rotate(0deg)',
-							top: '10%'
-						});
-						$(this).find('.flex-about').css({
-							opacity: '1'
-						});
-					}, function(){
-						$(this).find('.flex-title').css({
-							transform: 'rotate(90deg)',
-							top: '15%'
-						});
-						$(this).find('.flex-about').css({
-							opacity: '0'
-						});
-					})
-				});
-			})();
-			</script>
-
 
 
 
@@ -1219,8 +1174,10 @@
 
 		<!-- SCRIPTS -->
 		<script src="js/scripts.min.js"></script>
+		<script type="text/javascript" src="js/pana-accordion.js"></script>
 		<script src="js/main.js"></script>
-		
+
+
 		<!-- jQuery REVOLUTION Slider  -->
 		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 		<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
