@@ -19,6 +19,9 @@ $(function(){
 		offset: 30
 	}).init();
 
+
+		
+
 	// SMOTHSCROLL-LINK
 	smoothScroll.init({
 		easing: 'easeInOutCubic'
